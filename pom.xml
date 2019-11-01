@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <!--插件也需要用下面三个维度进行唯一标识-->
+    <groupId>com.tian</groupId>
+    <artifactId>count-maven-plugin</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <!--如果本工程是一个插件工程, 则packageing必须是这个-->
+    <packaging>maven-plugin</packaging>
+
+    <!--插件名-->
+    <name>count-maven-plugin Maven Mojo</name>
+
+    <!--maven官网-->
+    <url>http://maven.apache.org</url>
+
+    <!--下面本个依赖是自己定义插件时所需要的依赖, 也可以是说是一个固定写法-->
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.maven</groupId>
+            <artifactId>maven-plugin-api</artifactId>
+            <version>2.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- dependencies to annotations -->
+        <dependency>
+            <groupId>org.apache.maven.plugin-tools</groupId>
+            <artifactId>maven-plugin-annotations</artifactId>
+            <version>3.4</version>
+            <scope>provided</scope>
+        </dependency>
+    </dependencies>
+</project>
